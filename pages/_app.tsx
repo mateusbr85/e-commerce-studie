@@ -2,12 +2,12 @@ import '../styles/globals.scss'
 import Router, { useRouter } from "next/router";
 import type { AppProps } from 'next/app';
 import _ from "lodash";
-import Header from "../src/components/header";
+import Header from "../src/components/Header";
 
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const pages: any = { 0 : "index", 1: "cabeçlho"}
+  const pages: any = ["index","cabeçalho"]
   for(var i in pages){
     console.log(pages[i])
     if(router.pathname.includes(pages[i])){
